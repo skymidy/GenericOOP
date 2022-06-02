@@ -1,4 +1,4 @@
-package com.example.facade;
+package com.example.generic;
 
 import java.util.ArrayList;
 
@@ -12,12 +12,12 @@ public class MyArrayList<T> implements MyList<T> {
 
     public MyArrayList() {
         length = 0;
-        arr = new ArrayList<T>(length);
+        arr = new ArrayList<>(length);
     }
 
     public MyArrayList(int n) {
         length = n;
-        arr = new ArrayList<T>(length);
+        arr = new ArrayList<>(length);
     }
 
     public void add(T element) {
@@ -29,7 +29,7 @@ public class MyArrayList<T> implements MyList<T> {
         }
 
         length = (length == 0) ? 2 : length * 2;
-        ArrayList<T> temp = new ArrayList<T>(length);
+        ArrayList<T> temp = new ArrayList<>(length);
         for (int i = 0; i < arr.size(); i++) {
             temp.add(arr.get(i));
         }
@@ -54,7 +54,7 @@ public class MyArrayList<T> implements MyList<T> {
 
     public void remove(int position) {
         length -= 1;
-        ArrayList<T> temp = new ArrayList<T>(length);
+        ArrayList<T> temp = new ArrayList<>(length);
         int cur = 0;
         for (int i = 0; i < length; i++) {
             if (i == position) continue;

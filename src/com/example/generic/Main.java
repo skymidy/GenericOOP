@@ -1,9 +1,9 @@
-package com.example.facade;
+package com.example.generic;
 
 public class Main {
 
     public static void main(String[] args) {
-        MyArrayList<Integer> arrayList = new MyArrayList<Integer>();
+        MyArrayList<Integer> arrayList = new MyArrayList<>();
         System.out.println(arrayList.size());
         arrayList.add(10);
         System.out.println(arrayList.size());
@@ -13,7 +13,7 @@ public class Main {
         System.out.println(arrayList.get(1));
         arrayList.remove(1);
 
-        MyLinkedList<Integer> l = new MyLinkedList<Integer>();
+        MyLinkedList<Integer> l = new MyLinkedList<>();
         l.add(22);
         System.out.println(l.get(0));
         System.out.println(l.find(22));

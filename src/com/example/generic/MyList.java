@@ -1,4 +1,4 @@
-package com.example.facade;
+package com.example.generic;
 
 public interface MyList<T> {
     void add(T element);

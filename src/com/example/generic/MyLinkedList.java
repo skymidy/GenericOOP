@@ -1,4 +1,4 @@
-package com.example.facade;
+package com.example.generic;
 
 
 public class MyLinkedList<T> implements MyList<T> {
@@ -18,7 +18,7 @@ public class MyLinkedList<T> implements MyList<T> {
 
     public void add(T element) {
 
-        Node<T> newNode = new Node<T>();
+        Node<T> newNode = new Node<>();
         newNode.payload = element;
 
         if (head == null) {
