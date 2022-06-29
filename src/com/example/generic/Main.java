@@ -3,6 +3,7 @@ package com.example.generic;
 public class Main {
 
     public static void main(String[] args) {
+
         MyArrayList<Integer> arrayList = new MyArrayList<>();
         System.out.println(arrayList.size());
         arrayList.add(10);
@@ -12,6 +13,7 @@ public class Main {
         arrayList.set(1, 1);
         System.out.println(arrayList.get(1));
         arrayList.remove(1);
+        System.out.println(arrayList.get(1));
 
         MyLinkedList<Integer> l = new MyLinkedList<>();
         l.add(22);

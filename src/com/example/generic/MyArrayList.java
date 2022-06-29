@@ -34,7 +34,7 @@ public class MyArrayList<T> implements MyList<T> {
             temp.add(arr.get(i));
         }
 
-        temp.add(element);
+        temp.set(arr.size(), element);
         arr = temp;
     }
 
@@ -49,6 +49,7 @@ public class MyArrayList<T> implements MyList<T> {
                 arr.add(null);
             }
             arr.add(element);
+            length = arr.size();
         }
     }
 
@@ -78,6 +79,7 @@ public class MyArrayList<T> implements MyList<T> {
 
         if (index < 0 || index >= length) {
             System.out.println("Error: array index out of bounds");
+            return null;
         }
 
         return arr.get(index);

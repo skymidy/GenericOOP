@@ -2,6 +2,7 @@ package com.example.generic;
 
 
 public class MyLinkedList<T> implements MyList<T> {
+
     private class Node<Y> {
         public Node<Y> previous = null;
         public Node<Y> next = null;
@@ -10,11 +11,10 @@ public class MyLinkedList<T> implements MyList<T> {
 
     private Node<T> head;
 
-
     public MyLinkedList() {
         head = null;
-
     }
+
 
     public void add(T element) {
 
@@ -40,12 +40,14 @@ public class MyLinkedList<T> implements MyList<T> {
         Node<T> current = head;
 
         for (int i = 0; i < position; i++) {
-            if (current.next == null) {
-                System.out.println("Error: index out of bounds");
-                return;
+            if(current.next == null){
+                Node<T> newNode = new Node<>();
+                current.next = newNode;
+                newNode.previous = current;
             }
             current = current.next;
         }
+
         current.payload = element;
     }
 
